@@ -10,14 +10,15 @@ public class Operators {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int A=10;
-		int B=20;
+		int A=1;
+		int B=1;
 		
 		System.out.println("A= "+A);
 		System.out.println("B= "+B);
 		System.out.println("Assignment Operator = :"+ (A==B));
 		System.out.println("Addition Operator :"+ (A+B));
 		System.out.println("Bitwise XOR Operator :"+ (A^B));
+		System.out.println(A^B);
 
 	}
 
