@@ -1,5 +1,10 @@
 package com.demo.jsoup.crawl;
 
+/**
+ * Sample Test query to parse coursera data
+ * @author Rishu Shrivastava
+ */
+
 import java.io.IOException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.DataNode;
