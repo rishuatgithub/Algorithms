@@ -64,12 +64,23 @@ public class ConnectLinkedIn {
        System.out.println("********A basic user profile call********");
        //The ~ means yourself - so this should return the basic default information for your profile in XML format
        //https://developer.linkedin.com/documents/profile-api
-       String url = "http://api.linkedin.com/v1/people/~";
+       String url = "http://api.linkedin.com/v1/people/~:(id,first-name,last-name,maiden-name,formatted-name,phonetic-first-name,phonetic-last-name,formatted-phonetic-name,headline,location,industry,current-share,num-connections-capped,summary,specialties,positions,picture-url,site-standard-profile-request,api-standard-profile-request,public-profile-url)?format=json";
        OAuthRequest request = new OAuthRequest(Verb.GET, url);
        service.signRequest(accessToken, request);
        Response response = request.send();
        System.out.println(response.getBody());
-       System.out.println();System.out.println();		
+       System.out.println();System.out.println();
+       
+       /* requires partnership program approval 
+        * https://stackoverflow.com/questions/31508923/how-to-get-linkedin-r-fullprofile-access
+       System.out.println("** Accessing Full profile from linkedin **");
+       String url = "http://api.linkedin.com/v1/people/~:(interests)?format=json";
+       OAuthRequest request = new OAuthRequest(Verb.GET, url);
+       service.signRequest(accessToken, request);
+       Response response = request.send();
+       System.out.println(response.getBody());
+       System.out.println();System.out.println();*/
+       
 	}
 
 }
