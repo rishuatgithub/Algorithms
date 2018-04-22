@@ -5,7 +5,7 @@ public class MasterETL {
 		
 		String qry="i want to see the number of employees in ABC";
 		
-		
+		System.out.println(qry);
 	}
 
 }
